@@ -14,8 +14,9 @@ Nessa seção destacarei os arquivos mais relevantes para serem analisados:
 
 ## Dependências
 
-NodeJS == 15.10.0
-Docker
+- NodeJS == 15.10.0
+- NVM
+- Docker
 
 ## Instalação
 
