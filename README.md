@@ -4,13 +4,21 @@ Essa aplicação é uma API REST que realiza operações em um banco de dados Po
 
 São utilizadas as tecnologias NodeJS, ApolloServer (GraphQL), Knex, PostgreSQL, Docker. 
 
+# Estrutura do projeto
+Nessa seção destacarei os arquivos mais relevantes para serem analisados:
+- index.js: Arquivo que cuida do gerenciamento de contexto e validação do autenticador.
+- src/db: Diretório que possui as migrações feitas com o Knex.
+- src/graphql/modules/users: Diretório que possui os reolvers e o schema do GraphQL.
+- src/helpers: Diretório que possui as funções relacionadas à autenticação.
+- src/services: Classe com o serviço de cadastro e gerenciamento de usuário.
+
 ## Dependências
 
 NodeJS == 15.10.0
 
 ## Instalação
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Ese o seguinte comando para montar o docker e aplicação.
 
 ```bash
 make all
