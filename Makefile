@@ -1,10 +1,7 @@
-test: build
-	npm test
-	
 install: node_modules
-	docker pull brunohlabres/demo && nvm install 15.10.0 && npm install 
+	docker run --name postgres -p 5432:5432 -u postgres -e POSTGRES_PASSWORD=postgres -d postgres && sleep 20 && npx knex migrate:latest && npm install 
 
-up: 
-    docker run 5432:5432 brunohlabres/demo  && npm start
+all: install
+	npm start
 	
 node_modules: package.json
