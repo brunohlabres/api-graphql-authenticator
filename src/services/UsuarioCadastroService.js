@@ -9,7 +9,6 @@ class UsuarioCadastroService{
     usuarios = async () => await db("usuarios");
 
     criarUsuario = async( data ) => {
-        //data.token = generator.criarToken(data.id);
         return await (await this.service("usuarios").insert(data).returning("*"))[0];
     }
 
